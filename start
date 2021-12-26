@@ -1,0 +1,6 @@
+#!/bin/bash
+make setup
+current_folder=`pwd`
+cd ~/wave && ./waved &
+cd $current_folder
+make run
