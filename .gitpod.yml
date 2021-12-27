@@ -12,7 +12,7 @@ tasks:
   
 ports:
   - port: 10101
-    visibility: public
+    visibility: private
     onOpen: open-preview
 
 vscode:
