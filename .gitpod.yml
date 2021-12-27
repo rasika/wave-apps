@@ -6,7 +6,6 @@ tasks:
       mv wave-0.19.0-linux-amd64 ~/wave 
       cd ~/wave/ 
       ./waved &
-      cd /workspace/wave-apps
     command: |
       echo "test"
   
