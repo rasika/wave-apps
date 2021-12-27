@@ -1,13 +1,10 @@
 tasks:
   - init: |
       python -m pip install --upgrade pip
-      cd /tmp
+    command: |
       wget https://github.com/h2oai/wave/releases/download/v0.19.0/wave-0.19.0-linux-amd64.tar.gz
       tar -xvf wave-0.19.0-linux-amd64.tar.gz
-      echo "moving"
       mv wave-0.19.0-linux-amd64 ~/wave
-      echo "done!"
-    command: |
       ~/wave/waved &
 
 ports:
