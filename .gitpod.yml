@@ -1,0 +1,18 @@
+tasks:
+  - init: |
+      python -m pip install --upgrade pip
+      wget https://github.com/h2oai/wave/releases/download/v0.19.0/wave-0.19.0-linux-amd64.tar.gz
+      tar -xvf wave-0.19.0-linux-amd64.tar.gz
+      mv wave-0.19.0-linux-amd64 ~/wave
+      cd ~/wave && ./waved &
+    command: |
+      echo "fff"
+  
+ports:
+  - port: 10101
+    visibility: private
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - ms-python.python
