@@ -10,7 +10,10 @@ tasks:
       cd ~/wave
       ./waved &
       cd $cwd
-      [ -d "$e" ] || { echo "sample not found"; exit 1; }
+      [ -d "$e" ] || { echo "sample not found"; exit 1; } # check if $e is valid
+      mv $e "/tmp/$e"
+      rm -rf *
+      mv "/tmp/$e" .
       cd $e
       make setup
       make run
