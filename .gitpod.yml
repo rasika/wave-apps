@@ -14,7 +14,6 @@ tasks:
       mv $e "/tmp/$e"
       rm -rf *
       mv "/tmp/$e" .
-      cd $e
       make setup
       make run
 
