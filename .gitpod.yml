@@ -10,8 +10,10 @@ tasks:
       cd ~/wave
       ./waved &
       cd $cwd
-      echo $var2
-      
+      [ -f "$e" ] || { echo "sample not found"; exit 1; }
+      cd $e
+      make setup
+      make run
 
 ports:
   - port: 10101
