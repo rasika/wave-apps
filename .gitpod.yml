@@ -10,6 +10,7 @@ tasks:
       cd ~/wave
       ./waved &
       cd $cwd
+      echo $var2
       
 
 ports:
