@@ -13,7 +13,7 @@ tasks:
       [ -d "$e" ] || { echo "sample not found"; exit 1; } # check if $e is valid
       mv $e "/tmp/$e"
       rm -rf *
-      mv "/tmp/$e" ../`basename "$PWD"`
+      mv "/tmp/$e/*" ../`basename "$PWD"`
       cd $cwd
       make setup
       make run
