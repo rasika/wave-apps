@@ -14,6 +14,7 @@ tasks:
       mv $e "/tmp/$e"
       rm -rf *
       mv "/tmp/$e" ../`basename "$PWD"`
+      cd $cwd
       make setup
       make run
 
