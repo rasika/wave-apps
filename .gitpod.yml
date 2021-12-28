@@ -7,14 +7,16 @@ tasks:
       mv wave-0.19.0-linux-amd64 ~/wave
       rm wave-0.19.0-linux-amd64.tar.gz
       cwd=$(pwd)
+      base=`basename "$cwd"`
       cd ~/wave
       ./waved &
       cd $cwd
       [ -d "$e" ] || { echo "sample not found"; exit 1; } # check if $e is valid
       mv $e "/tmp/$e"
-      rm -rf *
-      mv "/tmp/$e/*" ../`basename "$PWD"`
-      cd $cwd
+      cd ..
+      rm -rf $base
+      mv "/tmp/$e" $base
+      cd $base
       make setup
       make run
 
